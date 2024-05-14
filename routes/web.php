@@ -2,6 +2,5 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\ExampleController::class, "homepage"]);
+Route::get('/about', [\App\Http\Controllers\ExampleController::class, "aboutPage"]);
